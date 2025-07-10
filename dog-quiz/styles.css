@@ -1,0 +1,228 @@
+/* Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe5b4 0%, #fffbe6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+}
+
+.container {
+    background-color: #fff8ec;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.12);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #e6b980;
+}
+
+/* SCREENS */
+.screen {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* START SCREEN */
+
+#start-screen h1 {
+    color: #b87333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 0 #fffbe6, 2px 4px 0 #e6b980;
+    position: relative;
+}
+#start-screen h1::before {
+    content: "🐾 ";
+}
+#start-screen h1::after {
+    content: " 🐶";
+}
+
+#start-screen p {
+    color: #7c5c2b;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.quiz-header {
+    margin-bottom: 1rem;
+}
+
+#question-text {
+    color: #5c3a0c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    color: #a67c52;
+    margin-bottom: 10px;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    background-color: #fffbe6;
+    color: #5c3a0c;
+    border: 2px solid #e6b980;
+    border-radius: 18px 18px 40px 18px/18px 18px 40px 18px;
+    padding: 1rem 1.5rem 1rem 2.5rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    position: relative;
+}
+.answer-btn::before {
+    content: "🐾";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.answer-btn:hover {
+    background-color: #ffe5b4;
+    border-color: #b87333;
+}
+
+.answer-btn.correct {
+    background-color: #e6ffe6;
+    border-color: #7ed957;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.answer-btn.incorrect {
+    background-color: #ffeaea;
+    border-color: #ffbdbd;
+    color: #b22222;
+    font-weight: bold;
+}
+
+.progress-bar {
+    height: 12px;
+    background-color: #ffe5b4;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1.5px solid #e6b980;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #b87333 0%, #e6b980 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* RESULT SCREEN */
+
+#result-screen h1 {
+    color: #b87333;
+    margin-bottom: 30px;
+    text-shadow: 1px 2px 0 #fffbe6, 2px 4px 0 #e6b980;
+    position: relative;
+}
+#result-screen h1::before {
+    content: "🏆 ";
+}
+#result-screen h1::after {
+    content: " 🐕";
+}
+
+.result-info {
+    background-color: #fffbe6;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 2px dashed #e6b980;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    color: #5c3a0c;
+    margin-bottom: 1rem;
+}
+
+#result-message {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b87333;
+    letter-spacing: 1px;
+}
+
+button {
+    background-color: #b87333;
+    color: white;
+    border: none;
+    border-radius: 18px 18px 40px 18px/18px 18px 40px 18px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-family: inherit;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.08);
+    position: relative;
+}
+button::before {
+    content: "🐶 ";
+}
+button:hover {
+    background-color: #7c5c2b;
+    transform: scale(1.04);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 500px) {
+    .screen {
+        padding: 1rem;
+    }
+
+    #start-screen h1 {
+        font-size: 2rem;
+    }
+
+    #question-text {
+        font-size: 1.1rem;
+    }
+
+    .answer-btn {
+        padding: 12px 12px 12px 2rem;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
