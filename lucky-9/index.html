@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky 9 Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lucky 9 Card Game</h1>
+        <br>
+        
+        <br>
+        <p>Try your luck and see if you can get a 9!</p>
+        <br>
+        <button id="start-btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <div class="game-area">
+        <div class="card-deck">
+            <div class="card" id="card1">
+                <div class="card-value">?</div>
+                <div class="card-label">Player Card 1</div>
+            </div>
+            <div class="card" id="card2">
+                <div class="card-value">?</div>
+                <div class="card-label">Player Card 2</div>
+            </div>
+            <div class="card" id="card3">
+                <div class="card-value">?</div>
+                <div class="card-label">Player Card 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-box">
+        <p class="message">You win!</p>
+        <p class="score">Score: <span class="score-value"></span></p> 
+        <p class="opponent-score">Opponent Score: <span class="opponent-score-value"></span></p>
+    </div>
+
+    <div class="controls">
+        <button class="draw-btn">Draw Third Card</button>
+        <button class="reveal-btn">Reveal Cards</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
