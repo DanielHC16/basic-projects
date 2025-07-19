@@ -1,3 +1,5 @@
+// TODO: Improved UI, Keep Track of Scores, and more opponents
+
 // DOM Elements
 const startBtn = document.getElementById('start-btn');
 const cardDeck = document.querySelector('.card-deck');
